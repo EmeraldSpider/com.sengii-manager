@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+  <base>CRM/Manager</base>
+  <class>SengiiGroup</class>
+  <name>civicrm_sengii_group</name>
+  <comment>Used to track changes to the Group entities</comment>
+  <log>true</log>
+
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Unique SengiiGroup ID</comment>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+
+  <field>
+    <name>group_id</name>
+    <type>int unsigned</type>
+    <comment>FK to Group</comment>
+  </field>
+  <foreignKey>
+    <name>group_id</name>
+    <table>civicrm_group</table>
+    <key>id</key>
+    <onDelete>CASCADE</onDelete>
+  </foreignKey>
+
+  <field>
+    <name>modified_date</name>
+    <type>datetime</type>
+    <comment>Date group was modified</comment>
+  </field>
+</table>
