@@ -134,6 +134,21 @@ function manager_civicrm_entityTypes(&$entityTypes) {
   _manager_civix_civicrm_entityTypes($entityTypes);
 }
 
+function manager_civicrm_post($op, $objectName, $objectId, &$objectRef){
+
+  if($objectName == "Group"){
+    try {
+      $groups = civicrm_api3('SengiiGroup', 'create', array(
+        'group_id' => $objectId,
+        'modified_date' => date("Y-m-d H:i:s"),
+      ));
+    }
+    catch (CiviCRM_API3_Exception $e) {
+      $error = $e->getMessage();
+    }
+  }
+}
+
 // --- Functions below this ship commented out. Uncomment as required. ---
 
 /**
