@@ -2,7 +2,7 @@
 use CRM_Manager_ExtensionUtil as E;
 
 /**
- * SubscriptionHistory.Get API specification (optional)
+ * ActivityStream.Get API specification (optional)
  * This is used for documentation and validation.
  *
  * @param array $spec description of fields supported by this API call
@@ -11,14 +11,15 @@ use CRM_Manager_ExtensionUtil as E;
  */
 
 /**
- * SubscriptionHistory.Get API
+ * ActivityStream.Get API
  *
  * @param array $params
  * @return array API result descriptor
  * @see civicrm_api3_create_success
  * @see civicrm_api3_create_error
  * @throws API_Exception
- */ 
-function civicrm_api3_subscription_history_Get($params) {
-  return _civicrm_api3_basic_get(_civicrm_api3_get_BAO(__FUNCTION__), $params, TRUE, 'SubscriptionHistory');
+ */
+function civicrm_api3_activity_stream_Get($params) {
+  return _civicrm_api3_basic_get(_civicrm_api3_get_BAO(__FUNCTION__), $params, TRUE, 'ActivityStream');
 }
+

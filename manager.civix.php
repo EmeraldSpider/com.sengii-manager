@@ -456,6 +456,12 @@ function _manager_civix_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
 
 function _manager_civix_civicrm_entityTypes(&$entityTypes) {
   $entityTypes = array_merge($entityTypes, array (
+    'CRM_Manager_DAO_ActivityStream' => 
+    array (
+      'name' => 'ActivityStream',
+      'class' => 'CRM_Manager_DAO_ActivityStream',
+      'table' => 'civicrm_activity_stream',
+    ),
     'CRM_Manager_DAO_SengiiGroup' => 
     array (
       'name' => 'SengiiGroup',

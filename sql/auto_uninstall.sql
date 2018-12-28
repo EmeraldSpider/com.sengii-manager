@@ -34,5 +34,6 @@
 SET FOREIGN_KEY_CHECKS=0;
 
 DROP TABLE IF EXISTS `civicrm_sengii_group`;
+DROP TABLE IF EXISTS `civicrm_activity_stream`;
 
 SET FOREIGN_KEY_CHECKS=1;
