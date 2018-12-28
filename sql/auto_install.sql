@@ -63,6 +63,7 @@
 SET FOREIGN_KEY_CHECKS=0;
 
 DROP TABLE IF EXISTS `civicrm_sengii_group`;
+DROP TABLE IF EXISTS `civicrm_activity_stream`;
 
 SET FOREIGN_KEY_CHECKS=1;
 -- /*******************************************************
@@ -70,6 +71,41 @@ SET FOREIGN_KEY_CHECKS=1;
 -- * Create new tables
 -- *
 -- *******************************************************/
+
+-- /*******************************************************
+-- *
+-- * civicrm_activity_stream
+-- *
+-- * Table for storing activity streams
+-- *
+-- *******************************************************/
+CREATE TABLE `civicrm_activity_stream` (
+
+
+     `id` int unsigned NOT NULL AUTO_INCREMENT  COMMENT 'Unique ActivityStream ID',
+     `points` int unsigned    COMMENT 'Number of points associated with the action',
+     `person_name` varchar(0)    COMMENT 'Name of Person',
+     `person_crmid` varchar(0)    COMMENT 'CRM Identifier for Person (Source of action)',
+     `person_id` int unsigned    COMMENT 'Person Identifier',
+     `group_name` varchar(0)    COMMENT 'Optional: Name of Group',
+     `group_crmid` varchar(0)    COMMENT 'Optional: CRM Identifier for Group (Target of action)',
+     `group_id` int unsigned    COMMENT 'Optional: Group Identifier',
+     `target_name` varchar(0)    COMMENT 'Name of Target',
+     `target_body` text    COMMENT 'Body of Target',
+     `target_crmid` varchar(0)    COMMENT 'CRM Identifier for Record (Exact Target of action)',
+     `target_id` int    COMMENT 'Target Record Identifier',
+     `target_parent_id` int    COMMENT 'Target\'s Parent Record Identifier',
+     `target_type` varchar(0)    COMMENT 'Links, Article, Event, Blog, Person, Event, Group, Asset, Group, Article, Forum, Comment, Message, Poll',
+     `date` datetime    COMMENT 'DateTime of Action',
+     `action_body` text    COMMENT 'Body of Action (description)',
+     `verb` varchar(0)    COMMENT 'Request, Accept, Decline, Edit, Add, Remove, Invite, Watch, Picture, Login, Mobile, OptIn, RSVP',
+     `noun` varchar(0)    COMMENT 'Group, GroupMember, Profile, Contact, Question, Answer, Permission, Comment, Note, Rate, Favorite, Like, Wall, Person, Forum, Blog, Asset, Article, Event, Link, Message, Mobile, Privacy' 
+,
+        PRIMARY KEY (`id`)
+ 
+ 
+ 
+)    ;
 
 -- /*******************************************************
 -- *

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+  <base>CRM/Manager</base>
+  <class>ActivityStream</class>
+  <name>civicrm_activity_stream</name>
+  <comment>Table for storing activity streams</comment>
+  <log>true</log>
+
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Unique ActivityStream ID</comment>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+
+  <field>
+    <name>points</name>
+    <type>int unsigned</type>
+    <comment>Number of points associated with the action</comment>
+  </field>
+  <field>
+    <name>person_name</name>
+    <type>varchar</type>
+    <comment>Name of Person</comment>
+  </field>
+  <field>
+    <name>person_crmid</name>
+    <type>varchar</type>
+    <comment>CRM Identifier for Person (Source of action)</comment>
+  </field>
+  <field>
+    <name>person_id</name>
+    <type>int unsigned</type>
+    <comment>Person Identifier</comment>
+  </field>
+  <field>
+    <name>group_name</name>
+    <type>varchar</type>
+    <comment>Optional: Name of Group</comment>
+  </field>
+  <field>
+    <name>group_crmid</name>
+    <type>varchar</type>
+    <comment>Optional: CRM Identifier for Group (Target of action)</comment>
+  </field>
+  <field>
+    <name>group_id</name>
+    <type>int unsigned</type>
+    <comment>Optional: Group Identifier</comment>
+  </field>
+  <field>
+    <name>target_name</name>
+    <type>varchar</type>
+    <comment>Name of Target</comment>
+  </field>
+  <field>
+    <name>target_body</name>
+    <type>text</type>
+    <comment>Body of Target</comment>
+  </field>
+  <field>
+    <name>target_crmid</name>
+    <type>varchar</type>
+    <comment>CRM Identifier for Record (Exact Target of action)</comment>
+  </field>
+  <field>
+    <name>target_id</name>
+    <type>int</type>
+    <comment>Target Record Identifier</comment>
+  </field>
+  <field>
+    <name>target_parent_id</name>
+    <type>int</type>
+    <comment>Target's Parent Record Identifier</comment>
+  </field>
+  <field>
+    <name>target_type</name>
+    <type>varchar</type>
+    <comment>Links, Article, Event, Blog, Person, Event, Group, Asset, Group, Article, Forum, Comment, Message, Poll</comment>
+  </field>
+  <field>
+    <name>date</name>
+    <type>datetime</type>
+    <comment>DateTime of Action</comment>
+  </field>
+  <field>
+    <name>action_body</name>
+    <type>text</type>
+    <comment>Body of Action (description)</comment>
+  </field>
+  <field>
+    <name>verb</name>
+    <type>varchar</type>
+    <comment>Request, Accept, Decline, Edit, Add, Remove, Invite, Watch, Picture, Login, Mobile, OptIn, RSVP</comment>
+  </field>
+  <field>
+    <name>noun</name>
+    <type>varchar</type>
+    <comment>Group, GroupMember, Profile, Contact, Question, Answer, Permission, Comment, Note, Rate, Favorite, Like, Wall, Person, Forum, Blog, Asset, Article, Event, Link, Message, Mobile, Privacy</comment>
+  </field>
+</table>
