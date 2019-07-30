@@ -462,6 +462,12 @@ function _manager_civix_civicrm_entityTypes(&$entityTypes) {
       'class' => 'CRM_Manager_DAO_ActivityStream',
       'table' => 'civicrm_activity_stream',
     ),
+    'CRM_Manager_DAO_GroupContactCache' => 
+    array (
+      'name' => 'GroupContactCache',
+      'class' => 'CRM_Manager_DAO_GroupContactCache',
+      'table' => 'civicrm_group_contact_cache',
+    ),
     'CRM_Manager_DAO_SengiiGroup' => 
     array (
       'name' => 'SengiiGroup',

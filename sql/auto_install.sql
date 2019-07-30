@@ -63,6 +63,8 @@
 SET FOREIGN_KEY_CHECKS=0;
 
 DROP TABLE IF EXISTS `civicrm_sengii_group`;
+DROP TABLE IF EXISTS `civicrm_group_contact_cache`;
+DROP TABLE IF EXISTS `civicrm_contact_group_cache`;
 DROP TABLE IF EXISTS `civicrm_activity_stream`;
 
 SET FOREIGN_KEY_CHECKS=1;
@@ -105,6 +107,25 @@ CREATE TABLE `civicrm_activity_stream` (
  
  
  
+)    ;
+
+-- /*******************************************************
+-- *
+-- * civicrm_group_contact_cache
+-- *
+-- * FIXME
+-- *
+-- *******************************************************/
+CREATE TABLE `civicrm_group_contact_cache` (
+
+
+     `id` int unsigned NOT NULL AUTO_INCREMENT  COMMENT 'Unique GroupContactCache ID',
+     `contact_id` int unsigned    COMMENT 'FK to Contact' 
+,
+        PRIMARY KEY (`id`)
+ 
+ 
+,          CONSTRAINT FK_civicrm_group_contact_cache_contact_id FOREIGN KEY (`contact_id`) REFERENCES `civicrm_contact`(`id`) ON DELETE CASCADE  
 )    ;
 
 -- /*******************************************************
